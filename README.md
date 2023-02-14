@@ -1,6 +1,7 @@
-# Remove Menu Page
+## Remove Menu Page
 
 ```
+// REMOVE MENU PAGE
 function remove_menus(){
   
   remove_menu_page( 'index.php' );                  //Dashboard
@@ -16,3 +17,19 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 ```
+## Remove Submenu Page
+```
+// REMOVE SUBMENU PAGE
+
+function remove_submenus() {
+	remove_submenu_page( 'themes.php', 'widgets.php' );
+	remove_submenu_page( 'users.php' , 'profile.php' ); 
+}
+add_action( 'admin_menu', 'remove_submenus' );
+```
+
+## References
+
+[remove_menu_page](https://developer.wordpress.org/reference/functions/remove_menu_page/)
+
+[remove_submenu_page](https://developer.wordpress.org/reference/functions/remove_submenu_page/)
