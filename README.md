@@ -24,6 +24,7 @@ add_action( 'admin_menu', 'remove_menus' );
 function remove_submenus() {
 	remove_submenu_page( 'themes.php', 'widgets.php' );
 	remove_submenu_page( 'users.php' , 'profile.php' ); 
+	remove_submenu_page( 'themes.php', 'theme-editor.php'); //editor
 }
 add_action( 'admin_menu', 'remove_submenus' );
 ```
